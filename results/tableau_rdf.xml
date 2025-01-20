@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/> .
+
+<http://example.org/node#5>
+        ex:labels  " ∀eats.Person " ;
+        ex:orEdge  <http://example.org/node#6> .
+
+<http://example.org/node#1>
+        ex:labels  "Person, ((((( ∀eats.Person  ⊔  ∀eats.⊥ ) ⊓ ( ∀loves.Animal  ⊔  ∀loves.⊥ )) ⊓ (Person ⊔  ∀eats.⊥ )) ⊓ (Person ⊔  ∀loves.⊥ )) ⊓ ((¬Animal ⊔ ¬Person) ⊓ (¬Person ⊔  ∃eats.Person ))), (Person ⊔  ∀eats.⊥ ), (Person ⊔  ∀loves.⊥ ), (¬Animal ⊔ ¬Person), (¬Person ⊔  ∃eats.Person ), ( ∀eats.Person  ⊔  ∀eats.⊥ ), ( ∀loves.Animal  ⊔  ∀loves.⊥ )" ;
+        ex:orEdge  <http://example.org/node#2> .
+
+<http://example.org/node#6>
+        ex:exEdge  <http://example.org/node#7> ;
+        ex:labels  " ∀loves.Animal " .
+
+<http://example.org/node#4>
+        ex:labels  " ∃eats.Person " ;
+        ex:orEdge  <http://example.org/node#5> .
+
+<http://example.org/node#2>
+        ex:labels  "¬Animal" ;
+        ex:orEdge  <http://example.org/node#4> , <http://example.org/node#3> .
